@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dn082xaoj2xlh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 127.0
+offset_bottom = 23.0
+scale = Vector2(3, 3)
+text = "PUZZLE DO BAÚ"
