@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn082xaoj2xlh"]
+
+[ext_resource type="PackedScene" uid="uid://b2d0m4xo3phbu" path="res://chave.tscn" id="1_xvcg6"]
+[ext_resource type="PackedScene" uid="uid://dmyglfs41xytr" path="res://fechadura.tscn" id="2_v1wax"]
+[ext_resource type="Texture2D" uid="uid://5rmsj1pg1jyn" path="res://Recursos/assets_dungeon.png" id="3_3rxr7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sq1u2"]
+size = Vector2(32, 32)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 127.0
+offset_bottom = 23.0
+scale = Vector2(3, 3)
+text = "PUZZLE DO BAÚ"
+
+[node name="fechadura" parent="." instance=ExtResource("2_v1wax")]
+position = Vector2(318, 138)
+
+[node name="chave" parent="." instance=ExtResource("1_xvcg6")]
+position = Vector2(111, 125)
+
+[node name="obstáculo" type="StaticBody2D" parent="."]
+position = Vector2(197, 104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstáculo"]
+shape = SubResource("RectangleShape2D_sq1u2")
+
+[node name="Sprite2D" type="Sprite2D" parent="obstáculo"]
+texture = ExtResource("3_3rxr7")
+hframes = 3
+vframes = 4
+frame = 6
+
+[node name="obstáculo" type="StaticBody2D" parent="obstáculo"]
+position = Vector2(0, 31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstáculo/obstáculo"]
+shape = SubResource("RectangleShape2D_sq1u2")
+
+[node name="Sprite2D" type="Sprite2D" parent="obstáculo/obstáculo"]
+texture = ExtResource("3_3rxr7")
+hframes = 3
+vframes = 4
+frame = 6
+
+[node name="obstáculo2" type="StaticBody2D" parent="obstáculo"]
+position = Vector2(0, 63)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstáculo/obstáculo2"]
+shape = SubResource("RectangleShape2D_sq1u2")
+
+[node name="Sprite2D" type="Sprite2D" parent="obstáculo/obstáculo2"]
+texture = ExtResource("3_3rxr7")
+hframes = 3
+vframes = 4
+frame = 6
+
+[node name="obstáculo" type="StaticBody2D" parent="obstáculo/obstáculo2"]
+position = Vector2(0, 31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstáculo/obstáculo2/obstáculo"]
+shape = SubResource("RectangleShape2D_sq1u2")
+
+[node name="Sprite2D" type="Sprite2D" parent="obstáculo/obstáculo2/obstáculo"]
+texture = ExtResource("3_3rxr7")
+hframes = 3
+vframes = 4
+frame = 6

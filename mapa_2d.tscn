@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cgyd848p1ehmq" path="res://Recursos/Action RPG Resources/Player/Player.png" id="1_d2krl"]
 [ext_resource type="Script" path="res://Recursos/Action RPG Resources/Player/jogador.gd" id="1_nbqc7"]
-[ext_resource type="Script" path="res://actionable.gd" id="3_tjehl"]
+[ext_resource type="Script" path="res://bau.gd" id="3_tjehl"]
 [ext_resource type="PackedScene" uid="uid://b05dkmornkpb6" path="res://botoes.tscn" id="4_02ouk"]
 [ext_resource type="Texture2D" uid="uid://5rmsj1pg1jyn" path="res://Recursos/assets_dungeon.png" id="5_8qj0p"]
 
@@ -345,6 +345,9 @@ parameters/Parado/blend_position = Vector2(-0.00291544, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Player"]
 shape = SubResource("CircleShape2D_sdv7f")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.5, 1.5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
