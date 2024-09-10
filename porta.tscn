@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://bu5yqa46tgst8"]
+[gd_scene load_steps=4 format=3 uid="uid://bu5yqa46tgst8"]
 
-[node name="Sprite2D" type="Sprite2D"]
+[ext_resource type="Texture2D" uid="uid://cv0mcpsle572q" path="res://Recursos/espinhos teste.png" id="1_pymt8"]
+[ext_resource type="Script" path="res://porta.gd" id="2_jxmq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8h7j"]
+size = Vector2(106, 10)
+
+[node name="porta" type="Sprite2D"]
+texture = ExtResource("1_pymt8")
+vframes = 2
+script = ExtResource("2_jxmq0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="DoorCollision" type="CollisionShape2D" parent="StaticBody2D"]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_i8h7j")

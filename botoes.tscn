@@ -1,22 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b05dkmornkpb6"]
+[gd_scene load_steps=3 format=3 uid="uid://de53aux3i63a2"]
 
-[ext_resource type="Texture2D" uid="uid://5rmsj1pg1jyn" path="res://Recursos/assets_dungeon.png" id="1_b4ipk"]
-[ext_resource type="Script" path="res://botao.gd" id="2_qsu2n"]
+[ext_resource type="Script" path="res://botoes.gd" id="1_k4m3a"]
+[ext_resource type="PackedScene" uid="uid://b05dkmornkpb6" path="res://botao.tscn" id="2_7njvu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrq7m"]
+[node name="botoes" type="Node2D"]
+script = ExtResource("1_k4m3a")
 
-[node name="botao" type="Sprite2D"]
-scale = Vector2(2.25, 2.25)
-texture = ExtResource("1_b4ipk")
-hframes = 3
-vframes = 4
-frame = 1
-script = ExtResource("2_qsu2n")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_qrq7m")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_player_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_player_exited"]
+[node name="botao" parent="." instance=ExtResource("2_7njvu")]

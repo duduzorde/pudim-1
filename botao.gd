@@ -1,7 +1,10 @@
 extends Sprite2D
 
+@export var door : Sprite2D
+
 func pressed():
 	frame = 2
+	owner.push_button(get_index())
 
 func unpressed():
 	frame = 1
