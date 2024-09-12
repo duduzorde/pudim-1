@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://gocniq6upavg"]
+
+[ext_resource type="Script" path="res://Recursos/Action RPG Resources/Management/level.gd" id="1_f5v0q"]
+
+[node name="Level" type="Node2D" node_paths=PackedStringArray("_hud")]
+script = ExtResource("1_f5v0q")
+_hud = NodePath("HUD")
+
+[node name="HUD" type="CanvasLayer" parent="."]
