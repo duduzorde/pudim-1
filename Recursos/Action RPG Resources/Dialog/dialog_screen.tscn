@@ -1,13 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxflrdsrfkxe4"]
+[gd_scene load_steps=5 format=3 uid="uid://dxflrdsrfkxe4"]
 
-[ext_resource type="Texture2D" path="res://Recursos/Action RPG Resources/Dialogue/melinateste.webp" id="1_j6oy5"]
+[ext_resource type="Texture2D" uid="uid://dd4ie53f3t53h" path="res://Recursos/Action RPG Resources/Dialog/Images/melinateste.webp" id="1_j6oy5"]
 [ext_resource type="Script" path="res://Recursos/Action RPG Resources/Dialog/dialog_screen.gd" id="1_qi0c5"]
-[ext_resource type="FontFile" path="res://Recursos/Action RPG Resources/Dialogue/Pixeled (1).ttf" id="2_5o4e3"]
-[ext_resource type="FontFile" path="res://Recursos/Action RPG Resources/Dialog/Pixeled (1).ttf" id="3_7mpvp"]
+[ext_resource type="FontFile" uid="uid://co8qbnn3gglme" path="res://Recursos/Action RPG Resources/Dialog/Fonts/Pixeled (1).ttf" id="3_7mpvp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_orepj"]
 line_spacing = 0.0
-font = ExtResource("2_5o4e3")
+font = ExtResource("3_7mpvp")
 shadow_color = Color(0, 0, 0, 0.6)
 
 [node name="DialogScreen" type="Control" node_paths=PackedStringArray("_name", "_dialog", "_faceset")]

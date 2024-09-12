@@ -29,12 +29,12 @@ func _process(delta):
 func _on_area_2d_mouse_entered():
 	if not is_dragging:
 		draggable = true
-		scale = Vector2(1.05, 1.05)
+		scale = scale * Vector2(1.05, 1.05)
 
 func _on_area_2d_mouse_exited():
 	if not is_dragging:
 		draggable = false
-		scale = Vector2(1, 1)
+		scale = scale * Vector2(0.95, 0.95)
 
 
 

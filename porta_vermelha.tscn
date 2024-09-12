@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb30tnypohii"]
+
+[ext_resource type="Texture2D" uid="uid://cv0mcpsle572q" path="res://Recursos/espinhos teste.png" id="1_46j55"]
+[ext_resource type="Script" path="res://porta_colorida.gd" id="2_q5c4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dploi"]
+size = Vector2(106, 9)
+
+[node name="porta vermelha" type="Sprite2D"]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(2, 4.44444)
+texture = ExtResource("1_46j55")
+vframes = 2
+script = ExtResource("2_q5c4k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="DoorCollision" type="CollisionShape2D" parent="StaticBody2D"]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_dploi")

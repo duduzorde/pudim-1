@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://83d4w56whsnv"]
+
+[ext_resource type="Script" path="res://botoes_azuis.gd" id="1_hs5o3"]
+[ext_resource type="Texture2D" uid="uid://5rmsj1pg1jyn" path="res://Recursos/assets_dungeon.png" id="2_1pogy"]
+[ext_resource type="Script" path="res://botao_azul.gd" id="2_y44my"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3h4q"]
+
+[node name="botoes_azuis" type="Node2D"]
+script = ExtResource("1_hs5o3")
+
+[node name="botao azul" type="Sprite2D" parent="."]
+modulate = Color(0, 0.00392157, 1, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("2_1pogy")
+hframes = 3
+vframes = 4
+frame = 1
+script = ExtResource("2_y44my")
+
+[node name="Area2D" type="Area2D" parent="botao azul"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botao azul/Area2D"]
+shape = SubResource("RectangleShape2D_o3h4q")
+
+[connection signal="body_entered" from="botao azul/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="botao azul/Area2D" to="botao azul" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="botao azul/Area2D" to="botao azul" method="_on_area_2d_body_exited"]
