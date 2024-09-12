@@ -4,10 +4,13 @@ var player_in_area = false
 
 func _ready():
 	$Label.visible = false  # Esconde o label de interação no início
+	$Sprite2D2.visible = true
+
 	
 func _process(delta):
 	if player_in_area and Input.is_action_just_pressed("interagir"):  # Verifica se a tecla "E" foi pressionada
-		get_tree().change_scene_to_file("res://puzzle_do_bau_1.tscn")  # Muda para a nova cena
+		$Sprite2D2.visible = false
+		$Label.visible = false
 
 
 func _on_body_entered(body: Node2D) -> void:

@@ -20,6 +20,7 @@ func _process(delta):
 			var tween = get_tree().create_tween()
 			if is_inside_dropable:
 				tween.tween_property(self,"position",body_ref.position,0.2).set_ease(Tween.EASE_OUT)
+				get_tree().change_scene_to_file("res://masmorra_2.tscn")
 				## INSERIR AQUI UMA FUNÇÃO get_tree().change_scene_to_file("res://cena com o bau aberto.tscn") PRA QUANDO TIVER A CENA PRONTA
 			else:
 				tween.tween_property(self,"position",initialPos,0.2).set_ease(Tween.EASE_OUT)

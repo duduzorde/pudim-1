@@ -1,16 +1,58 @@
-[gd_scene load_steps=41 format=3 uid="uid://cb6ol50v0xddj"]
+[gd_scene load_steps=48 format=3 uid="uid://pxp672iu0hc"]
 
-[ext_resource type="Texture2D" uid="uid://cgyd848p1ehmq" path="res://Recursos/Action RPG Resources/Player/Player.png" id="1_d2krl"]
-[ext_resource type="Script" path="res://Recursos/Action RPG Resources/Player/jogador.gd" id="1_nbqc7"]
-[ext_resource type="Script" path="res://bau.gd" id="3_tjehl"]
-[ext_resource type="PackedScene" uid="uid://de53aux3i63a2" path="res://botoes.tscn" id="4_02ouk"]
-[ext_resource type="Texture2D" uid="uid://5rmsj1pg1jyn" path="res://Recursos/assets_dungeon.png" id="5_8qj0p"]
-[ext_resource type="PackedScene" uid="uid://bu5yqa46tgst8" path="res://porta.tscn" id="6_mobrk"]
+[ext_resource type="Texture2D" uid="uid://npewmr6xcg5l" path="res://Recursos/masmorra mapa.png" id="1_gqpjd"]
+[ext_resource type="Script" path="res://Recursos/Action RPG Resources/Player/jogador.gd" id="2_lu1qo"]
+[ext_resource type="Script" path="res://baú_aberto.gd" id="2_pliqk"]
+[ext_resource type="Texture2D" uid="uid://cgyd848p1ehmq" path="res://Recursos/Action RPG Resources/Player/Player.png" id="3_msu8e"]
+[ext_resource type="Texture2D" uid="uid://7c04hrtk3ygp" path="res://Recursos/tile chao2.png" id="5_5ohfb"]
+[ext_resource type="Texture2D" uid="uid://1ht8yoe73mi4" path="res://Recursos/treasure-chest.png" id="5_tyqal"]
+[ext_resource type="Texture2D" uid="uid://bus8ckrn14kpt" path="res://Recursos/pudim.png" id="6_q4im2"]
+[ext_resource type="Texture2D" uid="uid://bmu1ph2cyvr24" path="res://Recursos/gems_db16.png" id="7_ny314"]
+[ext_resource type="PackedScene" uid="uid://ci1mggs1cx1e4" path="res://puzzle dos botao.tscn" id="7_yrkwt"]
+[ext_resource type="Texture2D" uid="uid://drcvk15vqovas" path="res://Recursos/KingSlime_Idle1.png" id="8_rx36k"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vfbly"]
-radius = 59.0085
+[sub_resource type="CircleShape2D" id="CircleShape2D_ypgg4"]
+radius = 105.119
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ewg81"]
+[sub_resource type="Animation" id="Animation_xxxrf"]
+resource_name = "brilho_pudim"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_etvn4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eqps4"]
+_data = {
+"RESET": SubResource("Animation_etvn4"),
+"brilho_pudim": SubResource("Animation_xxxrf")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hcina"]
 radius = 5.00001
 height = 46.0
 
@@ -269,7 +311,7 @@ advance_condition = &"Correndo"
 advance_mode = 2
 advance_condition = &"Parado"
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_rjcbl"]
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_vgyr6"]
 states/Correndo/node = SubResource("AnimationNodeBlendSpace2D_s316j")
 states/Correndo/position = Vector2(466, 230)
 states/End/position = Vector2(334, 100)
@@ -277,64 +319,123 @@ states/Parado/node = SubResource("AnimationNodeBlendSpace2D_4bnyy")
 states/Parado/position = Vector2(288, 230)
 states/Start/position = Vector2(92, 237)
 transitions = ["Start", "Parado", SubResource("AnimationNodeStateMachineTransition_b6ley"), "Parado", "Correndo", SubResource("AnimationNodeStateMachineTransition_e6ogg"), "Correndo", "Parado", SubResource("AnimationNodeStateMachineTransition_aar4s")]
-graph_offset = Vector2(-388, 54)
+graph_offset = Vector2(-446, 128)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_sdv7f"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_otnpy"]
 radius = 68.0
 
-[node name="mapa 2d" type="Node2D"]
+[node name="masmorra 2" type="Node2D"]
 
-[node name="baú" type="Area2D" parent="."]
-position = Vector2(256, 110)
-script = ExtResource("3_tjehl")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(777, -674)
+scale = Vector2(3.70999, 3.70999)
+texture = ExtResource("1_gqpjd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="baú"]
-shape = SubResource("CircleShape2D_vfbly")
-
-[node name="Label" type="Label" parent="baú"]
-offset_left = -76.0
-offset_top = -59.0
-offset_right = 77.0
-offset_bottom = -36.0
-text = "[Z] PARA INTERAGIR"
-
-[node name="Sprite2D" type="Sprite2D" parent="baú"]
-scale = Vector2(2.3125, 2.3125)
-texture = ExtResource("5_8qj0p")
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-415, -550)
+scale = Vector2(4.34372, 4.34372)
+texture = ExtResource("1_gqpjd")
 hframes = 3
-vframes = 4
+vframes = 3
+frame = 3
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(775.463, 279.589)
+scale = Vector2(3.71872, 3.71872)
+texture = ExtResource("1_gqpjd")
+hframes = 3
+vframes = 3
+frame = 7
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(0, 0, 1, -215, 1459, -217, 1467, 917, -1, 917, -181, 917, -183, -1, 0, 0, 0, 720, 1281, 720, 1280, 0)
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(324, -378)
+scale = Vector2(3.01563, 3.01563)
+texture = ExtResource("5_5ohfb")
 
-[node name="portas" type="Node2D" parent="."]
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(808, -1089)
+scale = Vector2(3.71872, 3.71872)
+texture = ExtResource("1_gqpjd")
+hframes = 20
+vframes = 10
+frame = 107
 
-[node name="porta" parent="portas" instance=ExtResource("6_mobrk")]
-position = Vector2(282, 426)
-scale = Vector2(3.77778, 3.77778)
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(323, -424)
+scale = Vector2(3.01563, 3.01563)
+texture = ExtResource("5_5ohfb")
 
-[node name="botoes" parent="." node_paths=PackedStringArray("door") instance=ExtResource("4_02ouk")]
-position = Vector2(378, 303)
-door = NodePath("../portas/porta")
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(333, -319)
+scale = Vector2(3.01563, 3.01563)
+texture = ExtResource("5_5ohfb")
+
+[node name="mapa 2d" parent="." instance=ExtResource("7_yrkwt")]
+position = Vector2(206, -913)
+
+[node name="baú aberto" type="Area2D" parent="."]
+position = Vector2(817, 215)
+script = ExtResource("2_pliqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="baú aberto"]
+shape = SubResource("CircleShape2D_ypgg4")
+
+[node name="Label" type="Label" parent="baú aberto"]
+offset_left = -97.0
+offset_top = -79.0
+offset_right = 98.0
+offset_bottom = -56.0
+text = "[Z] PARA PEGAR O PUDIM"
+
+[node name="Sprite2D" type="Sprite2D" parent="baú aberto"]
+position = Vector2(0, -27)
+scale = Vector2(4.0625, 4.0625)
+texture = ExtResource("5_tyqal")
+hframes = 4
+frame = 3
+
+[node name="Sprite2D2" type="Sprite2D" parent="baú aberto"]
+position = Vector2(0, -18)
+scale = Vector2(2, 2)
+texture = ExtResource("6_q4im2")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="baú aberto/Sprite2D2"]
+libraries = {
+"": SubResource("AnimationLibrary_eqps4")
+}
+
+[node name="gema" type="Sprite2D" parent="."]
+position = Vector2(813, -1709)
+scale = Vector2(6.96582, 6.96582)
+texture = ExtResource("7_ny314")
+hframes = 2
+vframes = 3
+frame = 5
+
+[node name="Slime" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.698039)
+position = Vector2(809, -1757)
+scale = Vector2(7.53906, 7.53906)
+texture = ExtResource("8_rx36k")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(88, 72)
-script = ExtResource("1_nbqc7")
+position = Vector2(819, 273)
+script = ExtResource("2_lu1qo")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 position = Vector2(-1, 0)
 scale = Vector2(3.84375, 3.84375)
-texture = ExtResource("1_d2krl")
+texture = ExtResource("3_msu8e")
 hframes = 60
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-2, 45)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_ewg81")
+shape = SubResource("CapsuleShape2D_hcina")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 libraries = {
@@ -342,7 +443,7 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="Player"]
-tree_root = SubResource("AnimationNodeStateMachine_rjcbl")
+tree_root = SubResource("AnimationNodeStateMachine_vgyr6")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/Correndo = false
 parameters/conditions/Parado = false
@@ -352,15 +453,15 @@ parameters/Correndo/7/blend_position = Vector2(0, 0)
 parameters/Correndo/8/blend_position = Vector2(0, 0)
 parameters/Correndo/9/blend_position = Vector2(0, 0)
 parameters/Correndo/10/blend_position = Vector2(0, 0)
-parameters/Parado/blend_position = Vector2(-0.00291544, 1)
+parameters/Parado/blend_position = Vector2(0.00105369, 0.978723)
 
 [node name="Player" type="Area2D" parent="Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Player"]
-shape = SubResource("CircleShape2D_sdv7f")
+shape = SubResource("CircleShape2D_otnpy")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.5, 1.5)
 
-[connection signal="body_entered" from="baú" to="baú" method="_on_body_entered"]
-[connection signal="body_exited" from="baú" to="baú" method="_on_body_exited"]
+[connection signal="body_entered" from="baú aberto" to="baú aberto" method="_on_body_entered"]
+[connection signal="body_exited" from="baú aberto" to="baú aberto" method="_on_body_exited"]

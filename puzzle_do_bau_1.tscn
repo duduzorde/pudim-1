@@ -87,7 +87,6 @@ scale = Vector2(10, 10)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D6"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_sw82b")
 
 [node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D6"]
@@ -104,7 +103,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D8"]
 position = Vector2(9.15, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_sw82b")
 
 [node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D8"]
@@ -211,7 +209,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D15"]
 position = Vector2(9.15, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_sw82b")
 
 [node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D15"]
@@ -228,7 +225,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D16"]
 position = Vector2(9.15, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_sw82b")
 
 [node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D16"]
@@ -260,7 +256,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D18"]
 position = Vector2(9.15, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_sw82b")
 
 [node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D18"]
@@ -291,7 +286,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D20"]
 position = Vector2(9, -9.53674e-07)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_sw82b")
 
 [node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D20"]
