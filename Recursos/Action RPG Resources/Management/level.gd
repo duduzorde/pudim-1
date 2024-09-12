@@ -32,7 +32,7 @@ var _dialog_data: Dictionary = {
 @export_category("Objects")
 @export var _hud: CanvasLayer = null
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_select"):
 		var _new_dialog: DialogScreen = _DIALOG_SCREEN.instantiate()
 		_new_dialog.data = _dialog_data
