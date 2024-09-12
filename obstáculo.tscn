@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck0ykyaa1cia1"]
+
+[ext_resource type="Texture2D" uid="uid://5rmsj1pg1jyn" path="res://Recursos/assets_dungeon.png" id="1_bjuym"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sq1u2"]
+size = Vector2(32, 32)
+
+[node name="obstáculo" type="StaticBody2D"]
+position = Vector2(197, 104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sq1u2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bjuym")
+hframes = 3
+vframes = 4
+frame = 6
+
+[node name="obstáculo" type="StaticBody2D" parent="."]
+position = Vector2(0, 31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstáculo"]
+shape = SubResource("RectangleShape2D_sq1u2")
+
+[node name="Sprite2D" type="Sprite2D" parent="obstáculo"]
+texture = ExtResource("1_bjuym")
+hframes = 3
+vframes = 4
+frame = 6
+
+[node name="obstáculo2" type="StaticBody2D" parent="."]
+position = Vector2(0, 63)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstáculo2"]
+shape = SubResource("RectangleShape2D_sq1u2")
+
+[node name="Sprite2D" type="Sprite2D" parent="obstáculo2"]
+texture = ExtResource("1_bjuym")
+hframes = 3
+vframes = 4
+frame = 6
+
+[node name="obstáculo" type="StaticBody2D" parent="obstáculo2"]
+position = Vector2(0, 31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstáculo2/obstáculo"]
+shape = SubResource("RectangleShape2D_sq1u2")
+
+[node name="Sprite2D" type="Sprite2D" parent="obstáculo2/obstáculo"]
+texture = ExtResource("1_bjuym")
+hframes = 3
+vframes = 4
+frame = 6

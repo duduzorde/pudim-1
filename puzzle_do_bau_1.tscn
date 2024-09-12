@@ -1,0 +1,331 @@
+[gd_scene load_steps=5 format=3 uid="uid://017we88sdtdt"]
+
+[ext_resource type="PackedScene" uid="uid://b2d0m4xo3phbu" path="res://chave.tscn" id="1_w5aj5"]
+[ext_resource type="PackedScene" uid="uid://dmyglfs41xytr" path="res://fechadura.tscn" id="2_nddiw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw82b"]
+size = Vector2(18.2, 2)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5tvps"]
+
+[node name="puzzle do bau 1" type="Node2D"]
+
+[node name="fechadura" parent="." instance=ExtResource("2_nddiw")]
+position = Vector2(735, 558)
+scale = Vector2(2, 2)
+
+[node name="chave" parent="." instance=ExtResource("1_w5aj5")]
+position = Vector2(248, 366)
+scale = Vector2(2, 2)
+
+[node name="paredes" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.310914, 0.17923, 0.0887776, 1)
+position = Vector2(161, 465)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D"]
+position = Vector2(6.25, 5.66244e-07)
+scale = Vector2(23.5, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(338, 466)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D2"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D2"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(787, 646)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D4"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(1143, 257)
+rotation = 1.5708
+scale = Vector2(10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D5"]
+position = Vector2(-6.9, 1.32239e-05)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D5"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(163, 263)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D6"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D6"]
+position = Vector2(6.15, 5.66244e-07)
+scale = Vector2(23.7, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(333, 74)
+rotation = 1.5708
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D8"]
+position = Vector2(9.15, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D8"]
+position = Vector2(9.14806, 5.66244e-07)
+scale = Vector2(17.7039, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(787, 459)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D9"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D9"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(509, 85)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D10"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D10"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(868, 85)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D11"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D11"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(1143, 476)
+rotation = 1.5708
+scale = Vector2(10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D12"]
+position = Vector2(6.9, 1.26207e-05)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D12"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(973, 646)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D13"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D13"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(677, 288)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D14"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D14"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(957, 286)
+rotation = 1.5708
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D15"]
+position = Vector2(9.15, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D15"]
+position = Vector2(9.14806, 5.66244e-07)
+scale = Vector2(17.7039, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(507, 276)
+rotation = 1.5708
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D16"]
+position = Vector2(9.15, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D16"]
+position = Vector2(9.14806, 5.66244e-07)
+scale = Vector2(17.7039, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(788, 288)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D17"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D17"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(617, 466)
+rotation = 1.5708
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D18"]
+position = Vector2(9.15, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D18"]
+position = Vector2(9.14806, 5.66244e-07)
+scale = Vector2(17.7039, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(972, 85)
+scale = Vector2(10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D19"]
+position = Vector2(8.7, -3.09944e-06)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D19"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(116, 274)
+rotation = 1.5708
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D20"]
+position = Vector2(9, -9.53674e-07)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D20"]
+position = Vector2(9.03782, 5.66244e-07)
+scale = Vector2(18.3023, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D21" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(698, 85)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D21"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D21"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="paredes"]
+modulate = Color(0.309804, 0.180392, 0.0901961, 1)
+position = Vector2(1143, 375)
+rotation = 1.5708
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D7"]
+position = Vector2(3.57628e-07, 7.15256e-07)
+shape = SubResource("RectangleShape2D_sw82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="paredes/StaticBody2D7"]
+position = Vector2(-4.76837e-07, 5.66244e-07)
+scale = Vector2(36, 2)
+texture = SubResource("CanvasTexture_5tvps")

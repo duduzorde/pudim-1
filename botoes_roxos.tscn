@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bagf17eid3qh4"]
+
+[ext_resource type="Script" path="res://botoes_roxos.gd" id="1_i1jgj"]
+[ext_resource type="Script" path="res://botao_roxo.gd" id="2_d70m4"]
+[ext_resource type="Texture2D" uid="uid://5rmsj1pg1jyn" path="res://Recursos/assets_dungeon.png" id="2_m736u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idq1a"]
+
+[node name="botoes_roxos" type="Node2D"]
+script = ExtResource("1_i1jgj")
+
+[node name="botao roxo" type="Sprite2D" parent="."]
+modulate = Color(0.65098, 0, 1, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("2_m736u")
+hframes = 3
+vframes = 4
+frame = 1
+script = ExtResource("2_d70m4")
+
+[node name="Area2D" type="Area2D" parent="botao roxo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botao roxo/Area2D"]
+shape = SubResource("RectangleShape2D_idq1a")
+
+[connection signal="body_entered" from="botao roxo/Area2D" to="botao roxo" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="botao roxo/Area2D" to="botao roxo" method="_on_area_2d_body_exited"]

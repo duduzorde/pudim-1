@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv0mcpsle572q"
-path="res://.godot/imported/espinhos teste.png-297dfab8bd40295855c9ea1d1f4d4939.ctex"
+uid="uid://dnnsii20myf56"
+path="res://.godot/imported/labirinto teste.png-3b7623ca0da64e25356e9cd9fd0f696f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://espinhos teste.png"
-dest_files=["res://.godot/imported/espinhos teste.png-297dfab8bd40295855c9ea1d1f4d4939.ctex"]
+source_file="res://Recursos/labirinto teste.png"
+dest_files=["res://.godot/imported/labirinto teste.png-3b7623ca0da64e25356e9cd9fd0f696f.ctex"]
 
 [params]
 
