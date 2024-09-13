@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var velocidade = Vector2(0,0) #velocidade normal no plano cartesiano é zero
+@export var frozen = false
 
 const VELOCIDADE_MAX = 5
 const ACELERACAO = 30
@@ -12,6 +13,8 @@ const ATRITO = 25
 # declarando as variáveis que vao pegar as animacoes da animation tree
 
 func _physics_process(delta):
+	if frozen:
+		return
 	
 	var resultante = Vector2(0,0)	
 	resultante.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
