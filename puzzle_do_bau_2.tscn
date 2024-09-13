@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bc6x02mv47i6h"]
+[gd_scene load_steps=5 format=3 uid="uid://bc6x02mv47i6h"]
 
 [ext_resource type="Texture2D" uid="uid://bfr0bu7o33gsd" path="res://Recursos/pixil-frame-0 (1).png" id="1_4yt3h"]
 [ext_resource type="PackedScene" uid="uid://b2d0m4xo3phbu" path="res://chave.tscn" id="1_788w6"]
 [ext_resource type="PackedScene" uid="uid://dmyglfs41xytr" path="res://fechadura.tscn" id="2_7qosm"]
+[ext_resource type="Script" path="res://chave2.gd" id="4_scrmk"]
 
 [node name="puzzle do bau 2" type="Node2D"]
 
@@ -21,6 +22,7 @@ polygon = PackedVector2Array(334, 120, 939, 120, 939, 606, 415, 607, 416, 241, 8
 position = Vector2(693, 356)
 scale = Vector2(1.25, 1.25)
 
-[node name="chave" parent="." instance=ExtResource("1_788w6")]
+[node name="chave2" parent="." instance=ExtResource("1_788w6")]
 position = Vector2(416, 74)
 scale = Vector2(1.5, 1.5)
+script = ExtResource("4_scrmk")
