@@ -326,12 +326,14 @@ radius = 68.0
 
 [node name="masmorra 2" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="cenário" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="cenário"]
 position = Vector2(777, -674)
 scale = Vector2(3.70999, 3.70999)
 texture = ExtResource("1_gqpjd")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="cenário"]
 position = Vector2(-415, -550)
 scale = Vector2(4.34372, 4.34372)
 texture = ExtResource("1_gqpjd")
@@ -339,7 +341,7 @@ hframes = 3
 vframes = 3
 frame = 3
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Sprite2D3" type="Sprite2D" parent="cenário"]
 position = Vector2(775.463, 279.589)
 scale = Vector2(3.71872, 3.71872)
 texture = ExtResource("1_gqpjd")
@@ -347,28 +349,58 @@ hframes = 3
 vframes = 3
 frame = 7
 
-[node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(324, -378)
-scale = Vector2(3.01563, 3.01563)
-texture = ExtResource("5_5ohfb")
+[node name="Sprite2D8" type="Sprite2D" parent="cenário"]
+position = Vector2(165.488, 278.681)
+scale = Vector2(3.73512, 3.73513)
+texture = ExtResource("1_gqpjd")
+hframes = 5
+vframes = 3
+frame = 11
 
-[node name="Sprite2D5" type="Sprite2D" parent="."]
+[node name="Sprite2D9" type="Sprite2D" parent="cenário"]
+position = Vector2(1440, 279)
+scale = Vector2(3.73512, 3.73513)
+texture = ExtResource("1_gqpjd")
+hframes = 5
+vframes = 3
+frame = 13
+
+[node name="Sprite2D5" type="Sprite2D" parent="cenário"]
 position = Vector2(808, -1089)
 scale = Vector2(3.71872, 3.71872)
 texture = ExtResource("1_gqpjd")
 hframes = 20
 vframes = 10
-frame = 107
+frame = 130
 
-[node name="Sprite2D6" type="Sprite2D" parent="."]
+[node name="Sprite2D4" type="Sprite2D" parent="cenário"]
+position = Vector2(324, -378)
+scale = Vector2(3.01563, 3.01563)
+texture = ExtResource("5_5ohfb")
+
+[node name="Sprite2D6" type="Sprite2D" parent="cenário"]
 position = Vector2(323, -424)
 scale = Vector2(3.01563, 3.01563)
 texture = ExtResource("5_5ohfb")
 
-[node name="Sprite2D7" type="Sprite2D" parent="."]
+[node name="Sprite2D7" type="Sprite2D" parent="cenário"]
 position = Vector2(333, -319)
 scale = Vector2(3.01563, 3.01563)
 texture = ExtResource("5_5ohfb")
+
+[node name="Sprite2D10" type="Sprite2D" parent="cenário"]
+position = Vector2(1387, -688.626)
+scale = Vector2(3.71872, 14.6344)
+texture = ExtResource("1_gqpjd")
+hframes = 20
+vframes = 10
+frame = 114
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cenário"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cenário/StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(626, 630, 408, 630, 408, -79, 539, -79, 539, -270, 145, -270, 147, -575, 306, -574, 306, -574, 306, -698, 306, -698, 363, -698, 365, -1009, 714, -1008, 714, -1239, 496, -1239, 496, -2157, 1110, -2158, 1109, -1240, 902, -1239, 902, -1239, 902, -1006, 1243, -1007, 1244, -268, 1066, -268, 1066, -84, 1249, -84, 1249, 627, 977, 627)
 
 [node name="mapa 2d" parent="." instance=ExtResource("7_yrkwt")]
 position = Vector2(206, -913)
@@ -382,21 +414,21 @@ shape = SubResource("CircleShape2D_ypgg4")
 
 [node name="Label" type="Label" parent="baú aberto"]
 offset_left = -97.0
-offset_top = -79.0
+offset_top = -94.0
 offset_right = 98.0
-offset_bottom = -56.0
+offset_bottom = -71.0
 text = "[Z] PARA PEGAR O PUDIM"
 
 [node name="Sprite2D" type="Sprite2D" parent="baú aberto"]
 position = Vector2(0, -27)
-scale = Vector2(4.0625, 4.0625)
+scale = Vector2(7.375, 7.375)
 texture = ExtResource("5_tyqal")
 hframes = 4
 frame = 3
 
 [node name="Sprite2D2" type="Sprite2D" parent="baú aberto"]
 position = Vector2(0, -18)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 texture = ExtResource("6_q4im2")
 hframes = 2
 frame = 1
@@ -405,6 +437,13 @@ frame = 1
 libraries = {
 "": SubResource("AnimationLibrary_eqps4")
 }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="baú aberto"]
+position = Vector2(-817, -215)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="baú aberto/StaticBody2D"]
+position = Vector2(817, 215)
+polygon = PackedVector2Array(-51, -5, -59, 32, -52, 88, 50, 91, 60, 32, 50, -5)
 
 [node name="gema" type="Sprite2D" parent="."]
 position = Vector2(813, -1709)
@@ -419,6 +458,11 @@ modulate = Color(1, 1, 1, 0.698039)
 position = Vector2(809, -1757)
 scale = Vector2(7.53906, 7.53906)
 texture = ExtResource("8_rx36k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Slime"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Slime/StaticBody2D"]
+polygon = PackedVector2Array(-4.24456, -12.999, -16.9782, -8.22385, -26.3959, 3.18341, -26.3959, 3.18341, -26.5285, 16.1824, -19.6311, 24.1409, 18.7026, 24.1409, 26.9264, 16.315, 26.9264, 16.315, 27.3243, 3.97926, 17.1109, -9.0197, 5.17306, -12.999)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(819, 273)
