@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwxjqj3scf2o4"]
+[gd_scene load_steps=13 format=3 uid="uid://bwxjqj3scf2o4"]
 
 [ext_resource type="Script" path="res://menu_inicial.gd" id="1_uyek5"]
 [ext_resource type="FontFile" uid="uid://cbfotjt7734ke" path="res://Recursos/Pixeled.ttf" id="2_v1np7"]
 [ext_resource type="Texture2D" uid="uid://bmu1ph2cyvr24" path="res://Recursos/gems_db16.png" id="3_6m3i2"]
 [ext_resource type="AudioStream" uid="uid://r03fkc4fn0vg" path="res://Recursos/musica/Menu.wav" id="4_0i58s"]
+[ext_resource type="Script" path="res://h_slider.gd" id="5_3xrmg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ek60"]
 bg_color = Color(0, 0, 0, 1)
@@ -23,6 +24,12 @@ region = Rect2(32.2637, 64.8533, 30.8098, 30.0198)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpyf5"]
 atlas = ExtResource("3_6m3i2")
 region = Rect2(3.03392, 34.8336, 23.6998, 24.2265)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3lin"]
+bg_color = Color(0.34902, 0.490196, 0.807843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57ar3"]
+bg_color = Color(1, 1, 1, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -129,6 +136,20 @@ texture = SubResource("AtlasTexture_lpyf5")
 stream = ExtResource("4_0i58s")
 volume_db = -10.0
 autoplay = true
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -387.5
+offset_right = 387.5
+offset_bottom = 152.0
+grow_horizontal = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_r3lin")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_57ar3")
+value = 50.0
+script = ExtResource("5_3xrmg")
 
 [connection signal="pressed" from="Panel/Button Jogar" to="." method="_on_button_jogar_pressed"]
 [connection signal="pressed" from="Panel/Button Quit" to="." method="_on_button_quit_pressed"]

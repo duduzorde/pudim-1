@@ -30,11 +30,11 @@ character2Gigante: (considerando)\
 join character right
 character: (encorajada)\
 "Pense bem, se você me esmagar, também vai esmagar o pudim. Não seria melhor fazer uma troca pacífica?"
-character: (aliviada)\
-"Ótimo! Aqui está o pudim."
 leave --All--
 character2Gigante: (sorrindo)\
 "Sabe de uma coisa? Você tem razão! Vamos fazer essa troca!"
+character: (aliviada)\
+"Ótimo! Aqui está o pudim."
 character2Gigante: (entregando a gema)\
 "E aqui está a gema. Aproveite-a bem, pequena. Agora, se me der licença, tenho um pudim para saborear!"
 join character right
