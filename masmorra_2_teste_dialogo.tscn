@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://ypb6kiq6mr1f"]
+[gd_scene load_steps=50 format=3 uid="uid://ypb6kiq6mr1f"]
 
 [ext_resource type="Texture2D" uid="uid://npewmr6xcg5l" path="res://Recursos/masmorra mapa.png" id="1_80d26"]
 [ext_resource type="Script" path="res://masmorra_2_teste_dialogo.gd" id="1_kkc1j"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://drcvk15vqovas" path="res://Recursos/KingSlime_Idle1.png" id="8_dc0er"]
 [ext_resource type="Script" path="res://Recursos/Action RPG Resources/Player/jogador.gd" id="9_etrxi"]
 [ext_resource type="Texture2D" uid="uid://cgyd848p1ehmq" path="res://Recursos/Action RPG Resources/Player/Player.png" id="10_hrsgc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3aqo"]
+size = Vector2(708, 19)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ypgg4"]
 radius = 105.119
@@ -404,6 +407,12 @@ frame = 114
 build_mode = 1
 polygon = PackedVector2Array(626, 630, 408, 630, 408, -79, 539, -79, 539, -270, 145, -270, 147, -575, 306, -574, 306, -574, 306, -698, 306, -698, 363, -698, 365, -1009, 714, -1008, 714, -1239, 496, -1239, 496, -2157, 1110, -2158, 1109, -1240, 902, -1239, 902, -1239, 902, -1006, 1243, -1007, 1244, -268, 1066, -268, 1066, -84, 1249, -84, 1249, 627, 977, 627)
 
+[node name="Area2D" type="Area2D" parent="cenário"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cenário/Area2D"]
+position = Vector2(805, -1505)
+shape = SubResource("RectangleShape2D_n3aqo")
+
 [node name="mapa 2d" parent="." instance=ExtResource("3_tpyfx")]
 position = Vector2(206, -913)
 
@@ -507,7 +516,7 @@ parameters/Parado/blend_position = Vector2(0.00105369, 0.978723)
 shape = SubResource("CircleShape2D_otnpy")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(1.5, 1.5)
 
+[connection signal="area_entered" from="cenário/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="baú aberto" to="baú aberto" method="_on_body_entered"]
 [connection signal="body_exited" from="baú aberto" to="baú aberto" method="_on_body_exited"]
