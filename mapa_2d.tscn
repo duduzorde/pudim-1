@@ -182,79 +182,79 @@ _data = {
 "RESET": SubResource("Animation_f7s6p")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p6jpv"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8bg6l"]
 animation = &"Correndo_esquerda"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ovekt"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iyd86"]
 animation = &"Correndo_baixo"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_iwd6u"]
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_41wwv"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4gon0"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k44au"]
 animation = &"Correndo_direita"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_m0ot2"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3q6m1"]
 animation = &"Correndo_cima"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_lawfq"]
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_rj0i8"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rdq6g"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fhpd5"]
 animation = &"Correndo_baixo"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_txdu8"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f38ny"]
 animation = &"Correndo_baixo"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_cvwaq"]
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_hd74d"]
 
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_hykcr"]
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_mejw1"]
 
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_tgga0"]
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_cd66g"]
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_s316j"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_p6jpv")
+blend_point_0/node = SubResource("AnimationNodeAnimation_8bg6l")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_ovekt")
+blend_point_1/node = SubResource("AnimationNodeAnimation_iyd86")
 blend_point_1/pos = Vector2(0, 1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_4gon0")
+blend_point_2/node = SubResource("AnimationNodeAnimation_k44au")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_m0ot2")
+blend_point_3/node = SubResource("AnimationNodeAnimation_3q6m1")
 blend_point_3/pos = Vector2(0, -1)
-blend_point_4/node = SubResource("AnimationNodeBlendSpace2D_lawfq")
+blend_point_4/node = SubResource("AnimationNodeBlendSpace2D_rj0i8")
 blend_point_4/pos = Vector2(0, -1)
-blend_point_5/node = SubResource("AnimationNodeAnimation_rdq6g")
+blend_point_5/node = SubResource("AnimationNodeAnimation_fhpd5")
 blend_point_5/pos = Vector2(0, -1)
-blend_point_6/node = SubResource("AnimationNodeAnimation_txdu8")
+blend_point_6/node = SubResource("AnimationNodeAnimation_f38ny")
 blend_point_6/pos = Vector2(0, -1)
-blend_point_7/node = SubResource("AnimationNodeBlendSpace2D_cvwaq")
+blend_point_7/node = SubResource("AnimationNodeBlendSpace2D_hd74d")
 blend_point_7/pos = Vector2(0, -1)
-blend_point_8/node = SubResource("AnimationNodeBlendSpace2D_hykcr")
+blend_point_8/node = SubResource("AnimationNodeBlendSpace2D_mejw1")
 blend_point_8/pos = Vector2(0, -1)
-blend_point_9/node = SubResource("AnimationNodeBlendSpace2D_tgga0")
+blend_point_9/node = SubResource("AnimationNodeBlendSpace2D_cd66g")
 blend_point_9/pos = Vector2(0, -1)
-blend_point_10/node = SubResource("AnimationNodeBlendSpace2D_iwd6u")
+blend_point_10/node = SubResource("AnimationNodeBlendSpace2D_41wwv")
 blend_point_10/pos = Vector2(0, -1)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8kfy0"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xcxlc"]
 animation = &"Parado_esquerda"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vmq5b"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xhjqe"]
 animation = &"Parado_direita"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l07ud"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wagee"]
 animation = &"Parado_baixo"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8dwkn"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ci7fb"]
 animation = &"Parado_cima"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_4bnyy"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_8kfy0")
+blend_point_0/node = SubResource("AnimationNodeAnimation_xcxlc")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_vmq5b")
+blend_point_1/node = SubResource("AnimationNodeAnimation_xhjqe")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_l07ud")
+blend_point_2/node = SubResource("AnimationNodeAnimation_wagee")
 blend_point_2/pos = Vector2(0, 1)
-blend_point_3/node = SubResource("AnimationNodeAnimation_8dwkn")
+blend_point_3/node = SubResource("AnimationNodeAnimation_ci7fb")
 blend_point_3/pos = Vector2(0, -1)
 blend_mode = 1
 
