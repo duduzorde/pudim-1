@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://b2g6fmcw4n7ld"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_wmguq"]
+
+[resource]
+script = ExtResource("1_wmguq")
+entries = {
+"Irmão mais velho": "Oni",
+"Oni": {
+"alternatives": ["Irmão mais velho"],
+"case_sensitive": true,
+"color": Color(1, 1, 1, 1),
+"name": "Oni",
+"text": "O irmão mais velho de Malina que está segurando a realidade com suas próprias mãos no local onde a joia se estilhaçou. ",
+"title": "Irmão mais velho"
+}
+}
+enabled = true
+_translation_id = ""
+_translation_keys = {}

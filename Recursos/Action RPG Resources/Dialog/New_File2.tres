@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://d1fodlqqffsfj"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_1e7d6"]
+
+[resource]
+script = ExtResource("1_1e7d6")
+entries = {
+"Irmão mais nova": "Zulli",
+"Zulli": {
+"alternatives": ["Irmão mais nova"],
+"color": Color(0.866667, 0.776471, 0.054902, 1),
+"name": "Zulli",
+"text": "É a irmã mais nova de Malina, muito amorosa e sincera, mas sua sinceridade às vezes ultrapassa o limite do respeito",
+"title": "Irmão mais nova"
+}
+}
+enabled = true
+_translation_id = ""
+_translation_keys = {}

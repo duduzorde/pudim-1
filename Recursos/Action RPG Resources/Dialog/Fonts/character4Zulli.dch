@@ -2,22 +2,22 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(0.675781, 0.366928, 0.642, 1),
+"color": Color(0.867188, 0.778267, 0.0541992, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "Malina1",
+"default_portrait": "Zulli",
 "description": "",
-"display_name": "Malina",
+"display_name": "Zulli",
 "mirror": false,
-"nicknames": ["Malina"],
+"nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Malina1": {
+"Zulli": {
 "export_overrides": {
-"image": "\"res://Recursos/Action RPG Resources/Dialog/Images/melinateste.webp\""
+"image": "\"res://Recursos/Action RPG Resources/Dialog/Images/zuliteste.webp\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

@@ -287,14 +287,12 @@ radius = 68.0
 
 [node name="masmorra 1" type="Node2D"]
 
-[node name="cenário" type="Node2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="cenário"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(777, -674)
 scale = Vector2(3.70999, 3.70999)
 texture = ExtResource("1_p3v1x")
 
-[node name="Sprite2D2" type="Sprite2D" parent="cenário"]
+[node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(-415, -550)
 scale = Vector2(4.34372, 4.34372)
 texture = ExtResource("1_p3v1x")
@@ -302,7 +300,7 @@ hframes = 3
 vframes = 3
 frame = 3
 
-[node name="Sprite2D3" type="Sprite2D" parent="cenário"]
+[node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(775.463, 279.589)
 scale = Vector2(3.71872, 3.71872)
 texture = ExtResource("1_p3v1x")
@@ -310,58 +308,28 @@ hframes = 3
 vframes = 3
 frame = 7
 
-[node name="Sprite2D8" type="Sprite2D" parent="cenário"]
-position = Vector2(165.488, 278.681)
-scale = Vector2(3.73512, 3.73513)
-texture = ExtResource("1_p3v1x")
-hframes = 5
-vframes = 3
-frame = 11
-
-[node name="Sprite2D9" type="Sprite2D" parent="cenário"]
-position = Vector2(1440, 279)
-scale = Vector2(3.73512, 3.73513)
-texture = ExtResource("1_p3v1x")
-hframes = 5
-vframes = 3
-frame = 13
-
-[node name="Sprite2D5" type="Sprite2D" parent="cenário"]
+[node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(808, -1089)
 scale = Vector2(3.71872, 3.71872)
 texture = ExtResource("1_p3v1x")
 hframes = 20
 vframes = 10
-frame = 130
+frame = 107
 
-[node name="Sprite2D4" type="Sprite2D" parent="cenário"]
+[node name="Sprite2D4" type="Sprite2D" parent="."]
 position = Vector2(324, -378)
 scale = Vector2(3.01563, 3.01563)
 texture = ExtResource("3_aj8do")
 
-[node name="Sprite2D6" type="Sprite2D" parent="cenário"]
+[node name="Sprite2D6" type="Sprite2D" parent="."]
 position = Vector2(323, -424)
 scale = Vector2(3.01563, 3.01563)
 texture = ExtResource("3_aj8do")
 
-[node name="Sprite2D7" type="Sprite2D" parent="cenário"]
+[node name="Sprite2D7" type="Sprite2D" parent="."]
 position = Vector2(333, -319)
 scale = Vector2(3.01563, 3.01563)
 texture = ExtResource("3_aj8do")
-
-[node name="Sprite2D10" type="Sprite2D" parent="cenário"]
-position = Vector2(1387, -688.626)
-scale = Vector2(3.71872, 14.6344)
-texture = ExtResource("1_p3v1x")
-hframes = 20
-vframes = 10
-frame = 114
-
-[node name="StaticBody2D" type="StaticBody2D" parent="cenário"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cenário/StaticBody2D"]
-build_mode = 1
-polygon = PackedVector2Array(626, 630, 408, 630, 408, -79, 539, -79, 539, -270, 145, -270, 147, -575, 306, -574, 306, -574, 306, -698, 306, -698, 363, -698, 365, -1009, 714, -1008, 714, -1239, 496, -1239, 496, -2157, 1110, -2158, 1109, -1240, 902, -1239, 902, -1239, 902, -1006, 1243, -1007, 1244, -268, 1066, -268, 1066, -84, 1249, -84, 1249, 627, 977, 627)
 
 [node name="baú" type="Area2D" parent="."]
 position = Vector2(817, 215)
@@ -379,39 +347,13 @@ text = "[Z] PARA INTERAGIR"
 
 [node name="Sprite2D" type="Sprite2D" parent="baú"]
 position = Vector2(0, -27)
-scale = Vector2(7.375, 7.375)
+scale = Vector2(4.0625, 4.0625)
 texture = ExtResource("5_5k6bm")
 hframes = 4
 metadata/_edit_group_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="baú"]
-position = Vector2(-817, -215)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="baú/StaticBody2D"]
-position = Vector2(817, 215)
-polygon = PackedVector2Array(-51, -5, -59, 32, -52, 88, 50, 91, 60, 32, 50, -5)
-
 [node name="mapa 2d" parent="." instance=ExtResource("6_ilvt1")]
 position = Vector2(206, -913)
-
-[node name="gema" type="Sprite2D" parent="."]
-position = Vector2(813, -1709)
-scale = Vector2(6.96582, 6.96582)
-texture = ExtResource("8_viaex")
-hframes = 2
-vframes = 3
-frame = 5
-
-[node name="Slime" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.698039)
-position = Vector2(809, -1757)
-scale = Vector2(7.53906, 7.53906)
-texture = ExtResource("9_w1njy")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Slime"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Slime/StaticBody2D"]
-polygon = PackedVector2Array(-4.24456, -12.999, -16.9782, -8.22385, -26.3959, 3.18341, -26.3959, 3.18341, -26.5285, 16.1824, -19.6311, 24.1409, 18.7026, 24.1409, 26.9264, 16.315, 26.9264, 16.315, 27.3243, 3.97926, 17.1109, -9.0197, 5.17306, -12.999)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(819, 519)
@@ -455,6 +397,20 @@ shape = SubResource("CircleShape2D_4krdc")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.25, 1.25)
+
+[node name="gema" type="Sprite2D" parent="."]
+position = Vector2(813, -1709)
+scale = Vector2(6.96582, 6.96582)
+texture = ExtResource("8_viaex")
+hframes = 2
+vframes = 3
+frame = 5
+
+[node name="Slime" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.698039)
+position = Vector2(809, -1757)
+scale = Vector2(7.53906, 7.53906)
+texture = ExtResource("9_w1njy")
 
 [connection signal="body_entered" from="baú" to="baú" method="_on_body_entered"]
 [connection signal="body_exited" from="baú" to="baú" method="_on_body_exited"]

@@ -2,22 +2,22 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(0.675781, 0.366928, 0.642, 1),
+"color": Color(1, 1, 1, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "Malina1",
+"default_portrait": "Oni",
 "description": "",
-"display_name": "Malina",
+"display_name": "Oni",
 "mirror": false,
-"nicknames": ["Malina"],
+"nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Malina1": {
+"Oni": {
 "export_overrides": {
-"image": "\"res://Recursos/Action RPG Resources/Dialog/Images/melinateste.webp\""
+"image": "\"res://Recursos/Action RPG Resources/Dialog/Images/oniteste.webp\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
