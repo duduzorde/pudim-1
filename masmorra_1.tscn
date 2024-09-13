@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://bi3hlcmk5e485"]
+[gd_scene load_steps=44 format=3 uid="uid://6tp7nffiymwh"]
 
 [ext_resource type="Script" path="res://Recursos/Action RPG Resources/Player/jogador.gd" id="1_icorg"]
 [ext_resource type="Texture2D" uid="uid://npewmr6xcg5l" path="res://Recursos/masmorra mapa.png" id="1_p3v1x"]
