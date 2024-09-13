@@ -1,6 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwxjqj3scf2o4"]
+[gd_scene load_steps=9 format=3 uid="uid://bwxjqj3scf2o4"]
 
 [ext_resource type="Script" path="res://menu_inicial.gd" id="1_uyek5"]
+[ext_resource type="FontFile" uid="uid://cbfotjt7734ke" path="res://Recursos/Pixeled.ttf" id="2_v1np7"]
+[ext_resource type="Texture2D" uid="uid://bmu1ph2cyvr24" path="res://Recursos/gems_db16.png" id="3_6m3i2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ek60"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ba8o5"]
+atlas = ExtResource("3_6m3i2")
+region = Rect2(32.2637, 30.0936, 30.2831, 30.8097)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxmwo"]
+atlas = ExtResource("3_6m3i2")
+region = Rect2(4.08723, 70.12, 22.3832, 22.9098)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwsce"]
+atlas = ExtResource("3_6m3i2")
+region = Rect2(32.2637, 64.8533, 30.8098, 30.0198)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpyf5"]
+atlas = ExtResource("3_6m3i2")
+region = Rect2(3.03392, 34.8336, 23.6998, 24.2265)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -18,6 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ek60")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
@@ -26,13 +48,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -233.0
-offset_top = -157.0
-offset_right = 233.0
-offset_bottom = -69.0
+offset_left = -347.0
+offset_top = -170.0
+offset_right = 347.0
+offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 64
+theme_override_fonts/font = ExtResource("2_v1np7")
+theme_override_font_sizes/font_size = 56
 text = "Chrono Kepper"
 
 [node name="Button Jogar" type="Button" parent="Panel"]
@@ -43,11 +66,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -185.0
-offset_top = 59.0
+offset_top = 52.5
 offset_right = 185.0
-offset_bottom = 145.0
+offset_bottom = 151.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_v1np7")
 theme_override_font_sizes/font_size = 32
 text = "Jogar"
 
@@ -64,8 +88,41 @@ offset_right = 185.0
 offset_bottom = 257.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_v1np7")
 theme_override_font_sizes/font_size = 32
 text = "Sair"
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 500.0
+offset_right = 212.0
+offset_bottom = 616.0
+texture = SubResource("AtlasTexture_ba8o5")
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 100.0
+offset_right = 1172.0
+offset_bottom = 216.0
+texture = SubResource("AtlasTexture_lxmwo")
+
+[node name="TextureRect3" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 500.0
+offset_right = 1172.0
+offset_bottom = 616.0
+texture = SubResource("AtlasTexture_qwsce")
+
+[node name="TextureRect4" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 212.0
+offset_bottom = 216.0
+texture = SubResource("AtlasTexture_lpyf5")
 
 [connection signal="pressed" from="Panel/Button Jogar" to="." method="_on_button_jogar_pressed"]
 [connection signal="pressed" from="Panel/Button Quit" to="." method="_on_button_quit_pressed"]
