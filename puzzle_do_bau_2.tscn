@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc6x02mv47i6h"]
+[gd_scene load_steps=6 format=3 uid="uid://bc6x02mv47i6h"]
 
 [ext_resource type="Texture2D" uid="uid://bfr0bu7o33gsd" path="res://Recursos/pixil-frame-0 (1).png" id="1_4yt3h"]
 [ext_resource type="PackedScene" uid="uid://b2d0m4xo3phbu" path="res://chave.tscn" id="1_788w6"]
 [ext_resource type="PackedScene" uid="uid://dmyglfs41xytr" path="res://fechadura.tscn" id="2_7qosm"]
 [ext_resource type="Script" path="res://chave2.gd" id="4_scrmk"]
+[ext_resource type="AudioStream" uid="uid://cxxnd82kb35ok" path="res://Recursos/musica/Puzzle-2.wav" id="5_xk3bc"]
 
 [node name="puzzle do bau 2" type="Node2D"]
 
@@ -26,3 +27,8 @@ scale = Vector2(1.25, 1.25)
 position = Vector2(416, 74)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("4_scrmk")
+
+[node name="Puzzle-2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_xk3bc")
+volume_db = -10.0
+autoplay = true

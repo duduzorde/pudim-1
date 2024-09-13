@@ -1,5 +1,6 @@
-[gd_scene load_steps=50 format=3 uid="uid://busw5bqd4khhj"]
+[gd_scene load_steps=53 format=3 uid="uid://y8jp4yqnt48f"]
 
+[ext_resource type="Script" path="res://masmorra_3.gd" id="1_5qw7d"]
 [ext_resource type="Texture2D" uid="uid://npewmr6xcg5l" path="res://Recursos/masmorra mapa.png" id="1_ubq4g"]
 [ext_resource type="Texture2D" uid="uid://7c04hrtk3ygp" path="res://Recursos/tile chao2.png" id="2_2vyya"]
 [ext_resource type="Texture2D" uid="uid://bbt2tq8qaq1hx" path="res://Recursos/parede-interna-alternativa2.png" id="3_es565"]
@@ -12,6 +13,10 @@
 [ext_resource type="Script" path="res://Recursos/Action RPG Resources/Player/jogador.gd" id="10_84bos"]
 [ext_resource type="Texture2D" uid="uid://4etfj1yfdj24" path="res://Recursos/Malina_versao_2.png" id="10_uk4ko"]
 [ext_resource type="Texture2D" uid="uid://73fr6bi5j0mt" path="res://Recursos/portão2.png" id="11_vlku2"]
+[ext_resource type="AudioStream" uid="uid://cpglavbiao0u6" path="res://Recursos/musica/BossEncounter.wav" id="14_4nt43"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvh8g"]
+size = Vector2(708, 19)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ypgg4"]
 radius = 105.119
@@ -327,6 +332,7 @@ graph_offset = Vector2(-388, 54)
 radius = 68.0
 
 [node name="masmorra 2" type="Node2D"]
+script = ExtResource("1_5qw7d")
 
 [node name="cenário" type="Node2D" parent="."]
 
@@ -403,6 +409,13 @@ frame = 114
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cenário/StaticBody2D"]
 build_mode = 1
 polygon = PackedVector2Array(626, 630, 408, 630, 408, -79, 539, -79, 539, -270, 145, -270, 147, -575, 306, -574, 306, -574, 306, -698, 306, -698, 363, -698, 365, -1009, 714, -1008, 714, -1239, 496, -1239, 496, -2157, 1110, -2158, 1109, -1240, 902, -1239, 902, -1239, 902, -1006, 1243, -1007, 1244, -268, 1066, -268, 1066, -84, 1249, -84, 1249, 627, 977, 627)
+
+[node name="Area2D" type="Area2D" parent="cenário"]
+position = Vector2(6.10352e-05, 3.05176e-05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cenário/Area2D"]
+position = Vector2(805, -1505)
+shape = SubResource("RectangleShape2D_bvh8g")
 
 [node name="mapa 2d" parent="." instance=ExtResource("4_ld1n4")]
 position = Vector2(206, -913)
@@ -546,6 +559,12 @@ scale = Vector2(2, 2)
 texture = ExtResource("11_vlku2")
 metadata/_edit_group_ = true
 
+[node name="BossEncounter" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_4nt43")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="area_entered" from="cenário/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="baú aberto" to="baú aberto" method="_on_body_entered"]
 [connection signal="body_exited" from="baú aberto" to="baú aberto" method="_on_body_exited"]
 [connection signal="body_entered" from="portão" to="portão" method="_on_body_entered"]

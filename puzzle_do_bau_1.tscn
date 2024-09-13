@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://017we88sdtdt"]
+[gd_scene load_steps=6 format=3 uid="uid://017we88sdtdt"]
 
 [ext_resource type="PackedScene" uid="uid://b2d0m4xo3phbu" path="res://chave.tscn" id="1_w5aj5"]
 [ext_resource type="PackedScene" uid="uid://dmyglfs41xytr" path="res://fechadura.tscn" id="2_nddiw"]
+[ext_resource type="AudioStream" uid="uid://bmljw3htg0l8s" path="res://Recursos/musica/CenaInicial-2.wav" id="3_24eak"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sw82b"]
 size = Vector2(18.2, 2)
@@ -323,3 +324,8 @@ shape = SubResource("RectangleShape2D_sw82b")
 position = Vector2(-4.76837e-07, 5.66244e-07)
 scale = Vector2(36, 2)
 texture = SubResource("CanvasTexture_5tvps")
+
+[node name="CenaInicial-2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_24eak")
+volume_db = -10.0
+autoplay = true

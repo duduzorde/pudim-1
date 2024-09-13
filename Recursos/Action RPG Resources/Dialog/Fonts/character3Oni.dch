@@ -8,20 +8,21 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "Oni",
+"default_portrait": "Oni.png",
 "description": "",
 "display_name": "Oni",
-"mirror": false,
+"mirror": true,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Oni": {
+"Oni.png": {
 "export_overrides": {
-"image": "\"res://Recursos/Action RPG Resources/Dialog/Images/oniteste.webp\""
+"image": "\"res://Recursos/Action RPG Resources/Dialog/Images/1726198352929.png\""
 },
+"ignore_char_scale": false,
 "mirror": false,
 "offset": Vector2(0, 0),
-"scale": 1,
+"scale": 0.75,
 "scene": ""
 }
 },

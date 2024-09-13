@@ -1,3 +1,4 @@
+join character right
 character: (confusa e desorientada)\
 "O que... o que aconteceu? Onde estou?"
 character: (olhando ao redor, vendo os destroços)\
@@ -12,3 +13,4 @@ character: (olhando para um corredor)\
 "Zuli... ela deve estar em seu quarto. Preciso falar com ela primeiro."
 character: (para si mesma)\
 "Vou consertar isso. Vou salvar nossa família e o tempo. Mamãe ficaria orgulhosa."
+leave character

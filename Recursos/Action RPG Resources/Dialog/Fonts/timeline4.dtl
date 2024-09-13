@@ -1,5 +1,7 @@
+join character right
 character: (criando a nova Joia do Tempo)\
 "Está feito! A nova Joia do Tempo está completa!"
+join character3Oni left
 character3Oni: (sentindo o alívio)\
 "Ah... o peso... está diminuindo. Você conseguiu, Malina!"
 character: (abraçando Oni)\
@@ -14,6 +16,7 @@ character: (soluçando)\
 "Eu sinto tanta falta dela..."
 character3Oni: (abraçando Malina)\
 "Eu também sinto, Malina. Mas não podemos perder você também. Você é forte, corajosa. A mamãe estaria orgulhosa."
+join character4Zulli center
 character4Zulli: (entrando no quarto)\
 "Oni! Malina! Vocês conseguiram!"
 (juntos)\

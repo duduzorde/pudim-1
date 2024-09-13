@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bwxjqj3scf2o4"]
+[gd_scene load_steps=10 format=3 uid="uid://bwxjqj3scf2o4"]
 
 [ext_resource type="Script" path="res://menu_inicial.gd" id="1_uyek5"]
 [ext_resource type="FontFile" uid="uid://cbfotjt7734ke" path="res://Recursos/Pixeled.ttf" id="2_v1np7"]
 [ext_resource type="Texture2D" uid="uid://bmu1ph2cyvr24" path="res://Recursos/gems_db16.png" id="3_6m3i2"]
+[ext_resource type="AudioStream" uid="uid://r03fkc4fn0vg" path="res://Recursos/musica/Menu.wav" id="4_0i58s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ek60"]
 bg_color = Color(0, 0, 0, 1)
@@ -56,7 +57,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_v1np7")
 theme_override_font_sizes/font_size = 56
-text = "Chrono Kepper"
+text = "Chrono Keeper"
 
 [node name="Button Jogar" type="Button" parent="Panel"]
 layout_mode = 1
@@ -123,6 +124,11 @@ offset_top = 100.0
 offset_right = 212.0
 offset_bottom = 216.0
 texture = SubResource("AtlasTexture_lpyf5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0i58s")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="Panel/Button Jogar" to="." method="_on_button_jogar_pressed"]
 [connection signal="pressed" from="Panel/Button Quit" to="." method="_on_button_quit_pressed"]

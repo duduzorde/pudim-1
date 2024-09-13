@@ -8,20 +8,21 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "Malina1",
-"description": "",
+"default_portrait": "Malina.png",
+"description": "Protagonista",
 "display_name": "Malina",
 "mirror": false,
 "nicknames": ["Malina"],
 "offset": Vector2(0, 0),
 "portraits": {
-"Malina1": {
+"Malina.png": {
 "export_overrides": {
-"image": "\"res://Recursos/Action RPG Resources/Dialog/Images/melinateste.webp\""
+"image": "\"res://Recursos/Action RPG Resources/Dialog/Images/1726192900407.png\""
 },
+"ignore_char_scale": true,
 "mirror": false,
 "offset": Vector2(0, 0),
-"scale": 1,
+"scale": 0.75,
 "scene": ""
 }
 },

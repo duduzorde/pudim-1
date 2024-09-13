@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbi70sfebu86l"]
+
+[ext_resource type="Script" path="res://cena_vazia.gd" id="1_ooh1l"]
+[ext_resource type="AudioStream" uid="uid://crlqb125ao4o1" path="res://Recursos/musica/DialogoFinal.wav" id="2_qf64g"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6844p"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ooh1l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(765, 398.5)
+scale = Vector2(1580, 847)
+texture = SubResource("CanvasTexture_6844p")
+
+[node name="DialogoFinal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qf64g")
+volume_db = -10.0
+autoplay = true

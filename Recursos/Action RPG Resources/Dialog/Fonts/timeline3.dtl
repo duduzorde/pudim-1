@@ -1,30 +1,45 @@
+[music path="res://Recursos/musica/BossEncounter.wav" fade="0.0" volume="-10.0"]
 character2Gigante: (furioso)\
 "Quem ousa invadir meu território?!"
+join character right
 character: (tentando manter a calma)\
 "Eu... eu sou Malina. Estou procurando por algo muito importante."
+leave --All--
 character2Gigante: (ameaçador)\
 "Importante? A única coisa importante aqui é que você será meu jantar!"
+join character right
 character: (recuando)\
 "Espere! Eu não quero lutar!"
+leave --All--
+[music fade="0.0" volume="0.0"]
 character2Gigante: (farejando o ar)\
 "Espere um momento... Isso que você está segurando... É um pudim mágico?"
+join character right
 character: (surpresa, olhando para o pudim)\
 "Sim, é... Você gosta de pudim?"
+leave --All--
+[music path="res://Recursos/musica/Pudim.wav" fade="0.0" volume="-10.0"]
 character2Gigante: (com os olhos brilhando)\
 "Pudim mágico é minha sobremesa favorita! Faz séculos que não como um!"
+join character right
 character: (pensativa)\
 "Hmm... E se fizéssemos uma troca? Este pudim pela gema que você tem?"
+leave --All--
 character2Gigante: (considerando)\
 "Minha gema de turmalina pelo pudim? Hmmm..."
+join character right
 character: (encorajada)\
 "Pense bem, se você me esmagar, também vai esmagar o pudim. Não seria melhor fazer uma troca pacífica?"
-character2Gigante: (sorrindo)\
-"Sabe de uma coisa? Você tem razão! Vamos fazer essa troca!"
 character: (aliviada)\
 "Ótimo! Aqui está o pudim."
+leave --All--
+character2Gigante: (sorrindo)\
+"Sabe de uma coisa? Você tem razão! Vamos fazer essa troca!"
 character2Gigante: (entregando a gema)\
 "E aqui está a gema. Aproveite-a bem, pequena. Agora, se me der licença, tenho um pudim para saborear!"
-character:  (segurando a gema)\
+join character right
+character: (segurando a gema)\
 "Obrigada! Aproveite o pudim!"
 character: (para si mesma, após o gigante sair)\
 "Ufa! Isso foi mais fácil do que eu esperava. Agora, preciso encontrar Zuli e sua gema.
+leave --All--

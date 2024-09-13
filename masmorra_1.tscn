@@ -1,5 +1,6 @@
-[gd_scene load_steps=44 format=3 uid="uid://bi3hlcmk5e485"]
+[gd_scene load_steps=46 format=3 uid="uid://bi3hlcmk5e485"]
 
+[ext_resource type="Script" path="res://masmorra_1.gd" id="1_4da5m"]
 [ext_resource type="Script" path="res://Recursos/Action RPG Resources/Player/jogador.gd" id="1_icorg"]
 [ext_resource type="Texture2D" uid="uid://npewmr6xcg5l" path="res://Recursos/masmorra mapa.png" id="1_p3v1x"]
 [ext_resource type="Texture2D" uid="uid://7c04hrtk3ygp" path="res://Recursos/tile chao2.png" id="3_aj8do"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bmu1ph2cyvr24" path="res://Recursos/gems_db16.png" id="8_viaex"]
 [ext_resource type="Texture2D" uid="uid://4etfj1yfdj24" path="res://Recursos/Malina_versao_2.png" id="9_fsrpf"]
 [ext_resource type="Texture2D" uid="uid://drcvk15vqovas" path="res://Recursos/KingSlime_Idle1.png" id="9_w1njy"]
+[ext_resource type="AudioStream" uid="uid://cdpna4seidxi6" path="res://Recursos/musica/CenaInicial-1.wav" id="11_54a2y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vgq6v"]
 radius = 148.122
@@ -286,6 +288,7 @@ graph_offset = Vector2(-388, 54)
 radius = 68.0
 
 [node name="masmorra 1" type="Node2D"]
+script = ExtResource("1_4da5m")
 
 [node name="cenário" type="Node2D" parent="."]
 
@@ -456,6 +459,11 @@ shape = SubResource("CircleShape2D_4krdc")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.25, 1.25)
+
+[node name="CenaInicial-1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_54a2y")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="body_entered" from="baú" to="baú" method="_on_body_entered"]
 [connection signal="body_exited" from="baú" to="baú" method="_on_body_exited"]

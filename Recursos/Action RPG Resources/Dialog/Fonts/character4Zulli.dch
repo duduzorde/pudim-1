@@ -8,20 +8,20 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "Zulli",
+"default_portrait": "Zulli.png",
 "description": "",
 "display_name": "Zulli",
-"mirror": false,
+"mirror": true,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Zulli": {
+"Zulli.png": {
 "export_overrides": {
-"image": "\"res://Recursos/Action RPG Resources/Dialog/Images/zuliteste.webp\""
+"image": "\"res://Recursos/Action RPG Resources/Dialog/Images/1726198318286.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
-"scale": 1,
+"scale": 0.75,
 "scene": ""
 }
 },
